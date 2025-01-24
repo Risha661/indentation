@@ -12,27 +12,28 @@
 </head>
 <body class="body">
   <article class="article">
-    <h1 class="article__title">Отступы в вёрстке: margin и padding</h1>
-    <section class="article__section">
-      <div class="article__container">
-        <h2 hidden>Первая секция</h2>
+    <section class="article__section-padding">
+      <div class="article__container article__container-header">
+        <h1 class="article__title">Отступы в вёрстке: margin и padding</h1>
         <p class="article__text article__text-margin">В этой статье я рассмотрю самые популярные "стандартные" решения для сохранения смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах организации отступов. Они сильно влияют на общую функциональность кода и, если всё сделано верно, позволяют легко вносить изменения в любую его часть. При этом другие части кода продолжат нормально работать.</p>
         <p class="article__text">Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти за их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для более опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.</p>
       </div>
+      <div class="article__container-nav">
+        <nav class="article__navigation navigation">
+          <h2 class="navigation__title">Содержание:</h2>
+          <ol class="navigation__list">
+            <li class="navigation__item">
+              <a href="#first" class="navigation__link">Отступ задается от предыдущего элемента к следующему</a>
+              </li>
+            <li class="navigation__item">
+              <a href="#second" class="navigation__link">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
+            <li class="navigation__item">
+              <a href="#third" class="navigation__link">Для последнего элемента группы отступ обнуляется</a></li>
+          </ol>
+        </nav>
+      </div>
     </section>
-    <nav class="article__navigation navigation">
-      <h2 class="navigation__title">Содержание:</h2>
-      <ol class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link">Отступ задается от предыдущего элемента к следующему</a>
-          </li>
-        <li class="navigation__item">
-          <a class="navigation__link">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
-        <li class="navigation__item">
-          <a class="navigation__link">Для последнего элемента группы отступ обнуляется</a></li>
-      </ol>
-    </nav>
-    <section class="article__section section">
+    <section id="first" class="article__section section">
       <div class="article__container">
         <h2 class="section__title">Отступ задается от предыдущего элемента к следующему: от первого ко второму, сверху вниз, слева направо.</h2>
         <div class="section__block-img section__float-block-left">
@@ -54,7 +55,7 @@
           </div>
       </div>
     </section>
-    <section class="article__section section">
+    <section id="second" class="article__section section">
       <div class="article__container">
         <h2 class="section__title">Отступ задается последнему возможному элементу в DOM-дереве</h2>
         <p class="section__text section__text-margin">Вообще, margin задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на этот список:</p>
@@ -81,7 +82,7 @@
         <p class="section__text section__text-margin">Это необходимо для более простого поиска отступов в будущем — для вас или того, кто будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом дублировании или выводе вёрстки с нестандартной структурой отступов.</p>
       </div>
     </section>
-    <section class="article__section section">
+    <section id="third" class="article__section section">
       <div class="article__container">
         <h2 class="section__title">Для последнего элемента группы отступ всегда обнуляется</h2>
         <p class="section__text section__text-margin">Для наглядности возьмём наш предыдущий пример с рецептами</p>
