@@ -1,0 +1,29 @@
+.navigation {
+  padding: 25px 30px 25px 45px;
+  margin: 25px 0;
+  border-radius: 10px;
+  background: #f1f1f1;
+  max-width: 1140px;
+}
+
+.navigation__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.navigation__list {
+  padding: 0 0 0 25px;
+  margin: 0;
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.navigation__item {
+  text-decoration: underline;
+}
+
+.navigation__link {
+  color: #02535F;
+}
